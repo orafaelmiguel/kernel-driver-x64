@@ -39,3 +39,19 @@ This project is a Windows kernel mode driver designed to enable reading and writ
   ```
     bcdedit /set testsigning on
   ```
+
+  2 - Driver Installation: Use the following command to load the driver:
+  ```
+    sc create kernel-driver-x64 type= kernel binPath= "C:\path\to\driver.sys"
+  ```
+
+  3 - Start the Driver: Start the driver with the following command:
+  ```
+    sc start kernel-driver-x64
+  ```
+
+  4 - Stop and Delete the Driver:
+  ```
+    sc stop kernel-driver-x64
+    sc delete kernel-driver-x64
+  ```
