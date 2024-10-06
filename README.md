@@ -55,3 +55,7 @@ This project is a Windows kernel mode driver designed to enable reading and writ
     sc stop kernel-driver-x64
     sc delete kernel-driver-x64
   ```
+
+### User Mode Application
+
+  To interact with the driver from user mode, you will need to send IOCTL requests. For instance, a C++ application would use CreateFile, DeviceIoControl, etc., to communicate with the driver using the predefined IOCTL codes (attach, read, write).
