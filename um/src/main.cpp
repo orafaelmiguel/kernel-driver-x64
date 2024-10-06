@@ -133,11 +133,11 @@ namespace driver
 
 int main()
 {
-	const DWORD pid = get_process_id(L"notepad.exe");
+	const DWORD pid = get_process_id(L"cs2.exe");
 
 	if (pid == 0)
 	{
-		std::cout << "Failed To Find Notepad\n";
+		std::cout << "Failed To Find cs2\n";
 		std::cin.get();
 		return 1;
 	}
@@ -155,6 +155,18 @@ int main()
 	{
 		std::cout << "Attachment Successful\n";
 
+		if (const std::uintptr_t client = get_module_base(pid, L"client.dll"); client != 0)
+		{
+			std::cout << "Client found";
+
+			while (true)
+			{
+				if (GetAsyncKeyState(VK_END))
+				{
+					break;
+				}
+			}
+		}
 	}
 	CloseHandle(driver);
 	std::cin.get();

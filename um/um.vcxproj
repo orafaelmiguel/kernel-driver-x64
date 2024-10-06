@@ -150,6 +150,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Offsets\Core\Offset.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Offsets\Core\Offset.h" />
+    <ClInclude Include="src\Offsets\Dependecies\https.h" />
+    <ClInclude Include="src\Offsets\Dependecies\json.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
