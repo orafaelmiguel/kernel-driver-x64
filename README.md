@@ -13,6 +13,6 @@ This project is a Windows kernel mode driver designed to enable reading and writ
 
 ### Requirements 
 
-  - Windows Development Kit (WDK): Required to build and develop Windows drivers.
-  - Visual Studio: Preferred IDE for driver development. Make sure to install the WDK components.
-  - Proper System Configuration: Ensure your system is configured to allow unsigned drivers (for testing) or sign your driver with a valid certificate.
+  - *Windows Development Kit (WDK)*: Required to build and develop Windows drivers.
+  - *Visual Studio*: Preferred IDE for driver development. Make sure to install the WDK components.
+  - *Proper System Configuration*: Ensure your system is configured to allow unsigned drivers (for testing) or sign your driver with a valid certificate.
